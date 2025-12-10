@@ -44,5 +44,14 @@ function getDBConnection() {
 function closeDBConnection($conn) {
     mysqli_close($conn);
 }
+
+// Get base path for assets (CSS, JS, images)
+function getBasePath() {
+    $basePath = '';
+    if (isset($_SERVER['PHP_SELF']) && strpos($_SERVER['PHP_SELF'], '/pages/') !== false) {
+        $basePath = '../';
+    }
+    return $basePath;
+}
 ?>
 
