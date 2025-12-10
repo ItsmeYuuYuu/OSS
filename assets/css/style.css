@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #000;
+    background-color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,10 +24,10 @@ body {
 
 /* Header Styles */
 .header {
-    background-color: #2c3e50;
+    background-color: #000;
     color: #fff;
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .navbar {
@@ -60,18 +60,19 @@ body {
 }
 
 .nav-menu li a:hover {
-    color: #3498db;
+    color: #ccc;
 }
 
 /* Main Content */
 main {
     flex: 1;
     padding: 2rem 0;
+    background-color: #fff;
 }
 
 .main-title {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -82,18 +83,22 @@ main {
     text-align: center;
     padding: 1rem;
     border-radius: 5px;
+    border: 2px solid #000;
 }
 
 .status-message.status-success {
-    background-color: #e8f5e9;
+    background-color: #f5f5f5;
+    border-color: #000;
 }
 
 .status-message.status-failed {
-    background-color: #ffebee;
+    background-color: #f5f5f5;
+    border-color: #000;
 }
 
 .status-message.status-not-configured {
-    background-color: #fff3e0;
+    background-color: #f5f5f5;
+    border-color: #000;
 }
 
 #db-status {
@@ -101,25 +106,25 @@ main {
 }
 
 .status-success #db-status {
-    color: #27ae60;
+    color: #000;
 }
 
 .status-failed #db-status {
-    color: #e74c3c;
+    color: #000;
 }
 
 .status-not-configured #db-status {
-    color: #f39c12;
+    color: #000;
 }
 
 .warning-box {
-    background-color: #fff3e0;
-    border-left: 4px solid #f39c12;
+    background-color: #f5f5f5;
+    border: 2px solid #000;
     margin-top: 1rem;
 }
 
 .warning-box h3 {
-    color: #e67e22;
+    color: #000;
     margin-bottom: 1rem;
 }
 
@@ -127,18 +132,19 @@ main {
     background-color: #fff;
     padding: 2px 6px;
     border-radius: 3px;
+    border: 1px solid #000;
     font-family: 'Courier New', monospace;
-    color: #e67e22;
+    color: #000;
 }
 
 .error-box {
-    background-color: #ffebee;
-    border-left: 4px solid #e74c3c;
+    background-color: #f5f5f5;
+    border: 2px solid #000;
     margin-top: 1rem;
 }
 
 .error-box h3 {
-    color: #c0392b;
+    color: #000;
     margin-bottom: 1rem;
 }
 
@@ -154,17 +160,18 @@ main {
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .thread-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 .thread-card h3 {
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
 }
@@ -174,20 +181,20 @@ main {
     gap: 1rem;
     margin-bottom: 1rem;
     font-size: 0.9rem;
-    color: #7f8c8d;
+    color: #333;
 }
 
 .thread-meta .author {
     font-weight: 600;
-    color: #3498db;
+    color: #000;
 }
 
 .thread-meta .date {
-    color: #95a5a6;
+    color: #666;
 }
 
 .thread-content {
-    color: #555;
+    color: #000;
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
@@ -195,30 +202,126 @@ main {
 .thread-image {
     margin-top: 0.5rem;
     padding-top: 0.5rem;
-    border-top: 1px solid #ecf0f1;
+    border-top: 1px solid #000;
 }
 
 .thread-image small {
-    color: #95a5a6;
+    color: #666;
     font-style: italic;
+}
+
+/* Table Styles */
+.table-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.data-table thead {
+    background-color: #000;
+    color: #fff;
+}
+
+.data-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: 1px solid #333;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #000;
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.data-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.data-table td {
+    padding: 1rem;
+    color: #000;
+    border: 1px solid #ddd;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:nth-child(even):hover {
+    background-color: #f0f0f0;
+}
+
+.table-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #000;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.table-info strong {
+    color: #000;
+    font-size: 1rem;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #000;
+}
+
+.badge-admin {
+    background-color: #000;
+    color: #fff;
+}
+
+.badge-user {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 
 .info-box {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     margin-top: 2rem;
 }
 
 .info-box h2 {
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 1rem;
 }
 
 .info-box p {
     margin-bottom: 1rem;
-    color: #555;
+    color: #000;
 }
 
 .info-box ul {
@@ -228,12 +331,12 @@ main {
 
 .info-box ul li {
     margin-bottom: 0.5rem;
-    color: #555;
+    color: #000;
 }
 
 /* Footer */
 .footer {
-    background-color: #2c3e50;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
@@ -265,4 +368,3 @@ main {
         padding: 1.5rem;
     }
 }
-

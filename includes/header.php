@@ -17,6 +17,7 @@
                 <ul class="nav-menu">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="pages/forum.php">Forum</a></li>
+                    <li><a href="pages/users.php">Users</a></li>
                     <li><a href="pages/about.php">About</a></li>
                 </ul>
             </div>
