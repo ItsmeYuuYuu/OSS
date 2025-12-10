@@ -20,5 +20,5 @@ jobs:
           server: ftpupload.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./projectB
-          server-dir: /htdocs
+          local-dir: ./projectB/   # phải có dấu / ở cuối
+          server-dir: /htdocs      # InfinityFree yêu cầu upload vào /htdocs
