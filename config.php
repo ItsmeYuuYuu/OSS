@@ -5,10 +5,13 @@
  */
 
 // Database connection settings
-define('DB_HOST', 'localhost'); // InfinityFree usually uses localhost
-define('DB_USER', 'your_username'); // Replace with your InfinityFree database username
+// InfinityFree database configuration
+// Host: sql107.infinityfree.com
+// Database: if0_40410414_forum_db
+define('DB_HOST', 'sql107.infinityfree.com'); // InfinityFree database host
+define('DB_USER', 'your_username'); // Replace with your InfinityFree database username (e.g., if0_40410414)
 define('DB_PASS', 'your_password'); // Replace with your InfinityFree database password
-define('DB_NAME', 'your_database'); // Replace with your InfinityFree database name
+define('DB_NAME', 'if0_40410414_forum_db'); // Database name
 
 // Check if database is configured
 function isDatabaseConfigured() {
