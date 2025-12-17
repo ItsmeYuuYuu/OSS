@@ -18,8 +18,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
           server: ftpupload.net
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.USER_FTP }}
+          password: ${{ secrets.PW_FTP }}
           local-dir: ./
           server-dir: /htdocs/Project-OSS/
           exclude: |

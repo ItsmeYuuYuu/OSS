@@ -52,3 +52,8 @@ if (!isDatabaseConfigured()) {
 include 'includes/footer.php';
 ?>
 
+
+
+
+
+
